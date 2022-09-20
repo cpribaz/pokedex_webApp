@@ -6,16 +6,17 @@
 <meta name="description" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 <link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="main.js"></script>
 </head>
 <div class="searchNumber">
     <input type="text" placeholder="Search By Number">
 </div>
 <div class="searchName">
-    <input type="text" placeholder="Search By Name">
+    <input type="text" placeholder="Search By Name" id="searchName" onkeyup="searchName()">
 </div>
 <body>
     <div class="cards">
-        <ul class="container">
+        <ul class="container" id="ul">
             <li id="001">
                 <img src="C:\Connor\Third Year\SE3316\Lab1\se3316-lab1-cpribaz\.vscode\pokemon\1.png" alt="Pokemon">
                 <h4>Bulbasaur</h4>
