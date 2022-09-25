@@ -46,7 +46,6 @@ function searchName(){
             li[i].style.display = "none";
         }
     }
-    alert(input.value);
 }
 
 function searchNumber(){
