@@ -9,10 +9,12 @@
 <script type="text/javascript" src="main.js"></script>
 </head>
 <div class="searchNumber">
-    <input type="text" placeholder="Search By Number" id="searchNumber" onkeyup="searchNumber()">
+    <input type="text" placeholder="Search By Number" id="searchNumber">
+    <button type="submit" onclick="searchNumber()">Search</button>
 </div>
 <div class="searchName">
-    <input type="text" placeholder="Search By Name" id="searchName" onkeyup="searchName()">
+    <input type="text" placeholder="Search By Name" id="searchName" required maxlength="20">
+    <button type="submit" onclick="searchName()">Search</button>
 </div>
 <body>
     <div class="cards">

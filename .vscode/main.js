@@ -37,7 +37,6 @@ function searchName(){
     ul = document.getElementById("ul");
     li = ul.getElementsByTagName('li');
 
-  // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
         h4 = li[i].getElementsByTagName("h4")[0];
         txtValue = h4.textContent || h4.innerText;
@@ -47,6 +46,7 @@ function searchName(){
             li[i].style.display = "none";
         }
     }
+    alert(input.value);
 }
 
 function searchNumber(){
@@ -56,14 +56,17 @@ function searchNumber(){
     ul = document.getElementById("ul");
     li = ul.getElementsByTagName('li');
 
-  // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-        num = li[i].getElementsByClassName("number")[0];
-        txtValue = num.textContent || num.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
+    if(input.value > 0 && input.value <21 || input.value.length === 0){
+        for (i = 0; i < li.length; i++) {
+            num = li[i].getElementsByClassName("number")[0];
+            txtValue = num.textContent || num.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
         }
+    }else{
+        alert("Enter a number between 1 and 20")
     }
 }
