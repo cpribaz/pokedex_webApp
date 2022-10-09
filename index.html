@@ -9,11 +9,11 @@
 <script type="text/javascript" src="main.js"></script>
 </head>
 <div class="searchNumber">
-    <input type="text" placeholder="Search By Number" id="searchNumber">
+    <input type="text" placeholder="Search By Number" id="searchNumber" onkeyup="searchNumber()">
     <button type="submit" onclick="searchNumber()">Search</button>
 </div>
 <div class="searchName">
-    <input type="text" placeholder="Search By Name" id="searchName" required maxlength="20">
+    <input type="text" placeholder="Search By Name" id="searchName" required maxlength="20" onkeyup="searchName()">
     <button type="submit" onclick="searchName()">Search</button>
 </div>
 <body>
