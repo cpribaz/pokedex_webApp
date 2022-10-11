@@ -32,19 +32,24 @@ function displayStats(clickedID){
 
 function searchName(){
     var input, filter, ul, li, i, txtValue;
+    var letters = /^[A-Za-z]+$/;
     input = document.getElementById('searchName');
     filter = input.value.toUpperCase();
     ul = document.getElementById("ul");
     li = ul.getElementsByTagName('li');
 
-    for (i = 0; i < li.length; i++) {
-        h4 = li[i].getElementsByTagName("h4")[0];
-        txtValue = h4.textContent || h4.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
+    if(input.value.match(letters) || input.value.length === 0){
+        for (i = 0; i < li.length; i++) {
+            h4 = li[i].getElementsByTagName("h4")[0];
+            txtValue = h4.textContent || h4.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
         }
+    }else{
+        alert("Enter letters between A-Z and a-z")
     }
 }
 
