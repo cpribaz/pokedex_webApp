@@ -43,9 +43,17 @@ function searchName(){
             h4 = li[i].getElementsByTagName("h4")[0];
             txtValue = h4.textContent || h4.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "";
-            } else {
-                li[i].style.display = "none";
+                var text = document.createElement("li");
+                text.textContent = li[i].textContent;
+                var result = text;
+                var resultList = document.getElementById("resultContainer");
+                resultList.appendChild(result);
+            } if(input.value.length == 0) {
+                resultList.remove();
+                var newList = document.createElement("ul");
+                newList.id = "resultContainer";
+                var div = document.getElementById("searchResults");
+                div.appendChild(newList);
             }
         }
     }else{
@@ -65,9 +73,17 @@ function searchNumber(){
             num = li[i].getElementsByClassName("number")[0];
             txtValue = num.textContent || num.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "";
-            } else {
-                li[i].style.display = "none";
+                var text = document.createElement("li");
+                text.textContent = li[i].textContent;
+                var result = text;
+                var resultList = document.getElementById("resultContainer");
+                resultList.appendChild(result);
+            } if(input.value.length == 0) {
+                resultList.remove();
+                var newList = document.createElement("ul");
+                newList.id = "resultContainer";
+                var div = document.getElementById("searchResults");
+                div.appendChild(newList);
             }
         }
     }else{
